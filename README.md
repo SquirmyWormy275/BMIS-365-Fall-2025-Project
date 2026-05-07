@@ -37,8 +37,8 @@ The version in this repository is the final coursework deliverable for BMIS 365 
 
 ```powershell
 # 1. Clone the repo
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/SquirmyWormy275/BMIS-365-Fall-2025-Project.git
+cd BMIS-365-Fall-2025-Project
 
 # 2. Create and activate a virtualenv
 python -m venv .venv
