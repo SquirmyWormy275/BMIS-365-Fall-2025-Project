@@ -1,6 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kwciuYWE)
-
 ### Woodchopping Handicap Calculator
+
+> Phase 1 of 3. This is the original project proposal submitted for BMIS 365 (Fall 2025). It defines the problem space and scope before any code was written. See `../project-deliverable-1/` for the V1 implementation and `../project-deliverable-2/` for the final V2 implementation.
 
 ## Executive Summary
 

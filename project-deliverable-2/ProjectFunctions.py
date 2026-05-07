@@ -1,4 +1,5 @@
-#Import Pandas, numpy, 
+#Import Pandas, numpy,
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,6 +10,10 @@ import textwrap
 from math import ceil
 from datetime import datetime
 from openpyxl import load_workbook, Workbook
+
+# Ollama configuration (override with environment variables if needed)
+OLLAMA_HOST  = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b")
 
 
 ##file/sheet names (saved in the same directory as this script!!!!!!!!!!!!!!!!!!!!!!!!)
@@ -661,11 +666,13 @@ def select_event_code(wood_selection):
 # AI INTEGRATION - OLLAMA FUNCTIONS (USED BY MENU 4)
 
 #Call in OLLAMA (qwen2.5:7b)
-def call_ollama(prompt, model="qwen2.5:7b"):
-    
+def call_ollama(prompt, model=None):
+    if model is None:
+        model = OLLAMA_MODEL
+
     try:
         response = requests.post(
-            'http://localhost:11434/api/generate',
+            f"{OLLAMA_HOST}/api/generate",
             json={
                 "model": model,
                 "prompt": prompt,

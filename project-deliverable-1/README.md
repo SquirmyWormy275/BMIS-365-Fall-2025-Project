@@ -1,5 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Pu7X6J-p)
-# Copy your title from the Project Proposal and paste it here. Update if necesssary.
+# Woodchopping Handicap Calculator — Deliverable 1 (V1)
+
+> Phase 2 of 3. This README was an interim template that was not filled in during the course because the V1 work continued directly into Deliverable 2. The V1 implementation itself lives in `DeliverableOne.py` and `project_functions.py`, with detailed step-by-step documentation in `Project Documentation/delieverableOne.md` and `Project Documentation/function_dictionary.md`. See `../project-deliverable-2/README.md` for the completed system documentation.
 ## Executive Summary
 Copy your text from the Project Proposal and paste it here. Make any changes here.
 

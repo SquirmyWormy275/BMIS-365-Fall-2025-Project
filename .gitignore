@@ -1,18 +1,53 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.egg-info/
 *.pkl
 *.pickle
-*.log
-*.tmp
-*.tmp.*
-*.swp
-*.swo
-*.DS_Store
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints
+
+# Virtualenvs
+venv/
+.venv/
+env/
+
+# Excel temp / lock files
+~$*.xlsx
+~$*.xls
+*.xlsx.lock
+
+# Environment / secrets
+.env
+.env.local
+*.env
+
+# OS / IDE
+.DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
 .idea/
-.env
-.venv/
-venv/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.tmp.*
+*.log
+
+# Build / dist
+dist/
+build/
+out/
+
+# Working dirs (not for public commit)
+_source/
+_diagrams_input/
+_scratch/
+_drafts/
