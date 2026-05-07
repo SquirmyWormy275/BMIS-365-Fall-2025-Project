@@ -19,6 +19,26 @@ The version in this repository is the final coursework deliverable for BMIS 365 
 - Validates fairness via Monte Carlo simulation. 250,000 simulated races with absolute ±3 second performance variance produce per-competitor win probability, average finish position, and a fairness rating from the LLM.
 - Persists heat results back to Excel so the historical data improves over time.
 
+## What it looks like
+
+The main menu after the roster loads from Excel:
+
+![Main menu](docs/Screenshots/MainMenu.png)
+
+Calculated handicap marks for a heat on 275mm Ponderosa Pine, Standing Block. Each row shows the assigned mark in seconds, the predicted finish time, the data source the prediction came from, and a confidence label.
+
+![Calculated handicap marks](docs/Screenshots/CalculatedMarks.png)
+
+Per-competitor win rate from a 250,000-race Monte Carlo simulation against the marks above. The 4.6 percentage-point spread (10.1% to 14.7%) is what fairness looks like in this system; perfect uniformity would be 12.5% per competitor.
+
+![Win rate visualization](docs/Screenshots/WinRateVisualization.png)
+
+The LLM's fairness assessment of those marks. The "Very Good" threshold is a spread under 6%, computed deterministically; the LLM contributes the natural-language explanation.
+
+![AI fairness assessment](docs/Screenshots/HandicappingAssessment.png)
+
+Additional screens (wood-characteristics submenu, Monte Carlo configuration, full simulation summary) live in [`docs/Screenshots/`](./docs/Screenshots).
+
 ## Tech stack
 
 **Language / runtime**: Python 3.10+
@@ -104,6 +124,13 @@ I want to be precise about scope: this version uses LLM reasoning and Monte Carl
 - **Institution**: University of Montana College of Business.
 - **Submission scope**: 3 deliverables (proposal, V1, V2). All preserved in this repo.
 - **Sport context**: I compete in timbersports. The Missoula Pro-Am and Mason County Western Qualifier may feature handicap races in the upcoming season; this tool is being evaluated for use at those events.
+
+## About the author
+
+Alex Kaper. MIS graduate (May 2026) from the University of Montana College of Business.
+
+- LinkedIn: [linkedin.com/in/alex-kaper](https://www.linkedin.com/in/alex-kaper)
+- Email: [alex.j.kaper@gmail.com](mailto:alex.j.kaper@gmail.com)
 
 ## License
 
