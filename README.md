@@ -41,7 +41,7 @@ Additional screens (wood-characteristics submenu, Monte Carlo configuration, ful
 
 ## Tech stack
 
-**Language / runtime**: Python 3.10+
+**Language / runtime**: Python 3.10 or newer. Developed and tested on Python 3.13.
 
 **Data and numerics**: pandas, numpy, openpyxl, matplotlib
 
@@ -96,6 +96,8 @@ This repo is the deliverable trail of a single course project. Each phase is pre
 | 1 | [`project-proposal/`](./project-proposal) | The initial project proposal: problem framing, scope, value proposition. Written before any code. |
 | 2 | [`project-deliverable-1/`](./project-deliverable-1) | V1 implementation. A purely deterministic handicap calculator: a hand-built wood-index formula combining size, quality, and species characteristics (Janka hardness, shear, MOR, MOE) to scale historical times. Worked well for the original roster, generalized poorly to new competitors. |
 | 3 | [`project-deliverable-2/`](./project-deliverable-2) | V2 implementation, final deliverable. Replaces the deterministic formula with a cascading lookup plus LLM-assisted quality reasoning. Adds Monte Carlo fairness validation, the Underhand event, results persistence, and a richer competitor management workflow. |
+
+The three phase READMEs are preserved as I submitted them, typos and uneven voice and all. This was my first Python project written from scratch, in my first Python class. The artifact of what one semester of learning actually looked like matters more to me than smoothing it after the fact. I have other work that demonstrates newer skills; this is what the starting point looked like.
 
 The most consequential discovery between V1 and V2 was about variance. Early V2 used proportional variance (each competitor's predicted time wobbled by ±X% of itself) and produced badly biased outcomes. Front-mark competitors won 31% of simulated races while back-mark competitors won 6.7%. Switching to absolute variance (every competitor's time wobbles by ±3 seconds in absolute terms) produced near-equal win probability across all skill levels, because real-world factors (technique consistency, wood grain variation, equipment) actually do affect competitors equally in absolute terms, not proportionally. That single change is the cleanest piece of engineering in the repo and is documented in detail in [`docs/CASE_STUDY.md`](./docs/CASE_STUDY.md).
 
