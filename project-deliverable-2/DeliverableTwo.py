@@ -1,10 +1,15 @@
-#Import Pandas, numpy, 
+#Import Pandas, numpy,
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
 from math import ceil
 from openpyxl import load_workbook
+
+# Force UTF-8 stdout so the program's ✓ checkmark and other non-ASCII glyphs
+# don't crash on Windows consoles using the default cp1252 codec.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 #Import Functions from project_functions.py 
 import ProjectFunctions as pf
